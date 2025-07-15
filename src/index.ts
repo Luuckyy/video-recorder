@@ -6,5 +6,15 @@ const VideoRecorder = registerPlugin<VideoRecorderPlugin>('VideoRecorder', {
   web: () => import('./web').then(m => new m.VideoRecorderWeb()),
 });
 
-export { VideoRecorderQuality, VideoRecorderCamera, VideoRecorderOptions, VideoRecorderErrors, VideoRecorderPlugin, VideoRecorderPreviewFrame } from './definitions';
+export * from './definitions';
 export { VideoRecorder };
+
+// Explicitly export the types that are being imported
+export type {
+  VideoRecorderPlugin,
+  VideoRecorderOptions,
+  VideoRecorderCamera,
+  VideoRecorderQuality,
+  VideoRecorderPreviewFrame,
+  VideoRecorderErrors
+} from './definitions';

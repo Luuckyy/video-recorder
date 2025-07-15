@@ -1,4 +1,5 @@
 import type { VideoRecorderPlugin } from './definitions';
 declare const VideoRecorder: VideoRecorderPlugin;
-export { VideoRecorderQuality, VideoRecorderCamera, VideoRecorderOptions, VideoRecorderErrors, VideoRecorderPlugin, VideoRecorderPreviewFrame } from './definitions';
+export * from './definitions';
 export { VideoRecorder };
+export type { VideoRecorderPlugin, VideoRecorderOptions, VideoRecorderCamera, VideoRecorderQuality, VideoRecorderPreviewFrame, VideoRecorderErrors } from './definitions';
